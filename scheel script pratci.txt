@@ -1,0 +1,14 @@
+#!/bin/bash
+  
+# This is new comment no to be excutable
+
+
+name=jaffer
+echo "My name is $name"
+echo "enter the name: "
+read username
+echo "You entered $username"
+
+sudo useradd -m $username
+
+echo "New user added"
