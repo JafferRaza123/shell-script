@@ -1,0 +1,13 @@
+#!bin/bash
+read -p "Enter the autherized Name: " name
+read -p "Enter the Autherized Percentage: " percentage
+if [[ $name == "Jaffer" ]];
+then
+        echo "This is Autherized"
+elif [[$percentage -ge 100]];
+then
+        echo "This is Autherized"
+
+else
+        echo "This is not autherized"
+fi
