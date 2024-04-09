@@ -1,0 +1,16 @@
+#!/bin/bash
+  
+# This is for the the loop
+# 1 is for the name of the folder
+# 2 is for the starting range
+# Is for the ending range
+
+for (( num=$2 ; num<=$3 ; num++ ))
+do      mkdir "$1$num"
+done
+what is the output
+# this is the out put of the following loop
+Day1    Day12  Day16  Day2   Day23  Day27  Day30  Day34  Day38  Day41  Day45  Day49  Day52  Day56  Day6   Day63  Day67  Day70  Day74  Day78  Day81  Day85  Day89  Day92  Day96  demo   demo4    mao.sh
+Day10   Day13  Day17  Day20  Day24  Day28  Day31  Day35  Day39  Day42  Day46  Day5   Day53  Day57  Day60  Day64  Day68  Day71  Day75  Day79  Day82  Day86  Day9   Day93  Day97  demo1  demo5
+Day100  Day14  Day18  Day21  Day25  Day29  Day32  Day36  Day4   Day43  Day47  Day50  Day54  Day58  Day61  Day65  Day69  Day72  Day76  Day8   Day83  Day87  Day90  Day94  Day98  demo2  jaf.sh
+Day11   Day15  Day19  Day22  Day26  Day3   Day33  Day37  Day40  Day44  Day48  Day51  Day55  Day59  Day62  Day66  Day7   Day73  Day77  Day80  Day84  Day88  Day91  Day95  Day99  demo3 
