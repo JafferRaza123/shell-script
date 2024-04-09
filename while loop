@@ -1,0 +1,21 @@
+#!/bin/bash
+  
+# While loop mean loop wil till run then condition is correct 
+
+num=0
+
+while [[ $num -le 5 ]]
+do
+        echo "lol"
+        num=$num+1
+done
+
+# The output
+<< component
+lol
+lol
+lol
+lol
+lol
+lol
+compomemt
