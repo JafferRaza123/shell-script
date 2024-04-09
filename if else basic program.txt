@@ -1,13 +1,16 @@
-#!bin/bash
-read -p "Enter the autherized Name: " name
-read -p "Enter the Autherized Percentage: " percentage
-if [[ $name == "Jaffer" ]];
-then
-        echo "This is Autherized"
-elif [[$percentage -ge 100]];
-then
-        echo "This is Autherized"
+#!/bin/bash
 
+<< info 
+this for knowledge
+info
+
+read -p "Enter the name is authorized: " name
+read -p "Enter the Priority of the Person: " priority
+
+if [[ $name == "Jaffer" ]]; then
+    echo "The Person is authorized"
+elif [[ $priority -ge 100 ]]; then
+    echo "The Person is authorized"
 else
-        echo "This is not autherized"
+    echo "The person is not Authorized"
 fi
