@@ -1,0 +1,45 @@
+#!/bin/bash
+
+<< task
+Deploy Django app 
+and handle the code for the errors
+task
+
+code_clone(){
+    echo "Cloning the code"
+    git clone https://github.com/JafferRaza123/django-notes-app.git || return 1
+} 
+
+install_requirements(){
+    echo "Installing the Dependencies"
+    sudo apt-get install docker.io nginx -y || return 1
+}
+
+requirement_restarts(){
+    sudo chown $USER /var/run/docker.sock
+    sudo systemctl enable docker
+    sudo systemctl enable nginx
+    sudo systemctl restart docker
+}
+
+deploy(){
+    docker build -t notes-app .
+    docker run -d -p 8000:8000 notes-app:latest
+}
+
+echo "*******DEPLOYMENT STARTED**************"
+if ! code_clone; then
+    echo "The code directory already exists"
+    cd django-notes-app || exit 1
+fi
+
+if ! install_requirements; then
+    echo "Installation failed"
+    exit 1
+fi
+
+if ! requirement_restarts; then
+    echo "System log identified"
+fi
+
+deploy
